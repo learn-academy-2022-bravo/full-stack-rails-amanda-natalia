@@ -1,0 +1,15 @@
+<h1>Learn Weeks</h1>
+<p>Checkout each Week's Lessons!</p>
+<ul>
+  <% @weeks.each do |week| %>
+    <li>
+      <%= link_to week.title, week_path(week) %>
+    </li>
+  <% end %>
+</ul>
+<br />
+<br />
+<p>Want to be apart of the club? Add a new week to our blog!</p>
+<p>
+  <%= link_to 'Add New Week', new_week_path %>
+</p>

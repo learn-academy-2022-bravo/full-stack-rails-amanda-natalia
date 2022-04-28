@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+    root 'learn_student#index', as: 'week'
+    get 'week/new' => 'learn_student#new', as: 'new_week'
+    get 'week/:id' => 'learn_student#show', as: 'week'
+    post 'week' => 'learn_student#create'
 end
